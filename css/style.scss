@@ -1,0 +1,475 @@
+$main-color: #012970;
+$bg-color: #f2f5fb;
+$bg-sec-color: #ffffff;
+$primary-color: #bcc3c5;
+$anchor-color: #0d6efd;
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style: none !important;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;
+    background-color: $bg-color;
+}
+
+/********************************
+******** Nav-Bar START **********
+********************************/
+.navbar{
+    width: 100%;
+    padding: 12px 0;
+    background-color: $bg-sec-color;
+    position: fixed;
+    z-index: 9999999;
+    top: 0;
+    left: 0;
+    box-shadow: 1px 0 5px #888;
+
+    .brand{
+        display: flex;
+        align-items: center;
+
+        img{
+            width: 25px;
+        }
+        h1{
+            font-size: 24px;
+            font-weight: bold;
+            a{
+                color: $main-color;
+            }
+        }
+        .menu-icon{
+            svg{
+                font-size: 22px;
+                color: $main-color;
+                margin-left: 15px;
+                padding: 6px;
+                cursor: pointer;
+            }
+        }
+    }
+    .user-info{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        .notification{
+            position: relative;
+            &::before{
+                content: '4';
+                position: absolute;
+                top: -10px;
+                left: -5px;
+                text-align: center;
+                background: $anchor-color;
+                width: 17px;
+                height: 17px;
+                line-height: 17px;
+                font-size: 12px;
+                color: #fff;
+                border-radius: 5px;
+            }
+        }
+        svg{
+            color: $main-color;
+            margin-right: 20px;
+            font-size: 20px;
+        }
+        .dropdown-user{
+            
+            img{
+                width: 35px;
+                border-radius: 50%;
+                margin-right: 5px;
+            }
+            span{
+                color: $main-color;
+                font-weight: bold;
+            }
+            svg{
+                font-size: 12px
+            }
+            
+        }
+    }
+}
+
+.dropdown-user-info{
+    .dropdown-header{
+        cursor: default;
+        h6{
+            color: #222;
+            font-size: 18px;
+            margin: 0;
+        }
+    }
+    .dropdown-item{
+        padding: 10px 15px;
+        color: #444;
+        font-size: 15px;
+        &:hover{
+            background-color: #f6f9ff;
+        }
+        svg{
+            color: #444;
+            margin-right: 10px;
+            font-size: 14px;
+        }
+    }
+}
+
+.dropdown-divider{ margin: 0; }
+
+.dropdown-menu.show{
+    width: 200px;
+    position: absolute;
+    top: 40px;
+    left: -25px;
+    &::before{
+        content: '';
+        width: 0;
+        border: 10px solid transparent;
+        border-bottom: 10px solid #333;
+        position: absolute;
+        top: -20px;
+        right: 15px;
+    }
+}
+
+/********************************
+******** Side-Bar START **********
+********************************/
+.sidebar{
+    position: fixed;
+    left: -300px;
+    top: 50px;
+    overflow-y: auto;
+    width: 300px;
+    height: 100vh;
+    scrollbar-width: thin;
+    scrollbar-color: #aab7cf transparent;
+    box-shadow: 10px 10px 20px rgba(1, 41, 112, 0.1) inset;
+    background-color: #fff;
+
+    ul{
+        li{
+            font-weight: 700;  
+            width: 100%;
+            &:hover svg{
+                color: $anchor-color;
+            }
+            a{
+                color: $main-color;
+                padding: 10px 15px;
+                display: block;
+                border-radius: 5px;
+                &:hover{
+                    color: $anchor-color;
+                    background-color: #f6f9ff;
+                }
+                svg{
+                    padding-right: 8px;
+                    color: #899bbd;
+                    
+                } 
+            }
+            h6{
+                font-size: 12px;
+                font-weight: bold;
+                padding: 10px 15px;
+                color: #899bbd;
+            }
+        }
+    }
+}
+
+.sidebar li a.active{
+    color: $anchor-color;
+    background-color: #f6f9ff;
+}
+.sidebar li a.active svg{
+    color: $anchor-color;
+}
+
+.sidebar.hide{
+    left: 0;
+    transition: all .4s ease-in-out;
+}
+
+@media (max-width: 600px){
+    .sidebar{ top: 80px; padding-bottom: 50px !important;}
+}
+
+/***********************************
+********* Bread-Crumb START ********
+***********************************/
+.bread-crumb{ margin-top:80px }
+
+.bread-crumb h2{
+    font-size: 22px;
+    color: $main-color;
+    font-weight: 600;
+}
+
+.breadcrumb-item a{
+    color: #979bbd;
+    font-size: 14px;
+    
+}
+
+.breadcrumb-item.active{
+    color: $main-color;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/**************************************************
+******* Dashoard-Content LEFT SECTION START *******
+**************************************************/
+.dashoard-content {
+    .sales{
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 1px 1px rgba(68, 68, 68, 0.048);
+    }
+    .sec-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h4{
+            font-size: 18px;
+            font-weight: bold;
+            color: $main-color;
+            span{
+                font-size: 14px;
+                color: #979bbd;
+                font-weight: 400;
+            }
+        }
+        .more{
+            font-size: 22px;
+            font-weight: bold;
+            color: #979bbd;
+            margin-top: -22px;
+            cursor: pointer;
+            &:hover{
+                color: $main-color;
+            }
+        }
+    }
+    .sales-content{
+        display: flex;
+        align-items: center;
+        margin-top: 15px;
+        svg{
+            color: #4154f1;
+            font-size: 30px;
+            margin-right: 25px;
+            background-color: #f6f6fe;
+            padding: 18px;
+            border-radius: 50%;
+        }
+        h4{
+            font-size: 28px;
+            font-weight: bold;
+            color: $main-color;
+        }
+        p{
+            color: #6c757d;
+            span{
+                color: #2e8754;
+                font-weight: bold;
+                font-size: 14px;
+                margin-right: 5px;
+            }
+        }
+    }
+    .fa-dollar-sign{
+        color: #2e8754 !important;
+        background-color: #e0f8e9 !important;
+        padding: 18px 23px !important;
+    }
+    .fa-user-group{
+        color: #ff771d !important;
+        background: #ffecdf !important;
+    }
+    .decrease{
+        color: #dc3545 !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    
+    .sales-card{ min-width: 100%; }
+    .sales-card:first-of-type{margin-bottom: 25px;}
+
+}
+
+.recent-sales{
+    overflow-x: auto;
+    table{
+        thead{
+            background: #f2f5fb;
+        }
+        th, td{
+            padding: 8px;
+        }    
+    }
+}
+
+tbody tr td.id{
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.approved, .pending, .rejected{
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 10px;
+}
+.approved{background: #2e8754;}
+.pending{background: #ffc107;}
+.rejected{background: #dc3545;}
+
+tbody tr .product,
+tbody tr .sold{ font-weight: bold; }
+
+.top-selling tbody tr .product-img{ max-width: 50px; }
+
+/**************************************************
+******* Dashoard-Content RIGHT SECTION START *******
+**************************************************/
+
+/* Recent Activity */
+.recent-activity{
+    background-color: $bg-sec-color;
+    padding: 20px 15px;
+    .activity{
+        margin-top: 15px;
+        .activity-item{
+            .activite-label{
+                position: relative;
+                &::after{
+                    content: '';
+                    position: absolute;
+                    right: -7px;
+                    top: 5px;
+                    width: 4px;
+                    height: 80px;
+                    background: #eceefe !important;
+                }
+                span{
+                    color: #888;
+                    font-size: 15px;
+                    width: 64px;
+                    display: block;
+                    flex-shrink: 0;
+                    flex-grow: 0;
+                }
+            }
+            svg{
+                color: #2e8754;
+                font-size: 10px;
+                margin-top: 5px;
+                z-index: 999;
+            }
+            .activity-content{
+                p{
+                    margin: 0; 
+                    padding: 0 0 15px 10px;
+                    a{
+                        font-weight:bold;
+                    }
+                }
+            }
+            
+        }
+    }
+}
+
+
+.activity-item:nth-child(2) svg{
+    color:#dc3545 !important;
+}
+.activity-item:nth-child(3) svg{
+    color:#4154f1 !important;
+}
+.activity-item:nth-child(4) svg{
+    color:#0dcaf0 !important;
+}
+.activity-item:nth-child(5) svg{
+    color:#ffc107 !important;
+}
+.activity-item:nth-child(6) svg{
+    color:#6c757d !important;
+}
+
+/* News & Update */
+.news-content{
+    .img-box{
+        max-width: 80px;
+         img{
+            border-radius: 5px;
+         }
+    }
+    .news-info{
+        margin-left: 15px;
+        a{
+            color: $main-color;
+            font-weight: 700;
+            font-size: 15px;
+            &:hover{
+                color: $anchor-color;
+                transition: .2S;
+            }
+        }
+        p{
+            font-size: 15px;
+            color: #777;
+        }
+    }
+}
+
+/* Footer */
+footer{
+    p{
+        margin: 0;
+        color: $main-color;
+    }
+    .copyright{
+        span{
+            font-weight: bold;
+        }
+    }
+    .created{
+        font-size: 14px;
+        a{font-weight: bold;}
+    }
+}
+
+/* Button Top */
+.top-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: $anchor-color;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: none;
+    &:hover{
+        opacity: .8;
+        transition: all .3s;
+    }
+}

@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dashboard Admin Analytics">
+    <title>Dashboard Admin</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <!-- Link Google Fonts Library -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Link Font Awesome Library -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Link Bootstrap CSS Library -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- Link Stylesheet CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Link Chart.JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+
+    <!-- Navbar Start -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="brand">
+                <h1>
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="logo">
+                        Nice Admin
+                    </a>
+                </h1>
+                <div class="menu-icon"><i class="fa fa-bars"></i></div>
+            </div>
+
+            <div class="user-info">
+                <div class="notification">
+                    <i class="fa-regular fa-bell"></i>
+                    <i class="fa-regular fa-message"></i>
+                </div>
+                <div class="dropdown">
+                    <li class="dropdown-toggle dropdown-user" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="img/profile-img.jpg" alt="user-info">
+                        <span>K. Anderson</span>
+                    </li>
+                    <ul class="dropdown-menu dropdown-user-info">
+                        <li class="dropdown-header text-center">
+                            <h6>Kevin Anderson</h6>
+                            <span>Web Designer</span>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="fa-solid fa-user"></i>
+                                <span>My Profile</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="fa-solid fa-gear"></i>
+                                <span>Account Settings</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="fa-regular fa-circle-question"></i>
+                                <span>Need Help?</span>
+                            </a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <a class="dropdown-item" href="#">
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                                <span>Sing Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Side-Bar Start -->
+    <div class="sidebar bg-white p-4">
+        <div class="pb-4">
+            <ul class="list-unstyled">
+                <li class="my-2">
+                    <a href="index.html" class="active">
+                        <i class="fa-solid fa-gauge"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="my-2">
+                    <a href="#">
+                        <i class="fa-solid fa-folder"></i>
+                        <span>Components</span>
+                    </a>
+                </li>
+                <li class="my-2">
+                    <a href="#">
+                        <i class="fa-brands fa-wpforms"></i>
+                        <span>Forms</span>
+                    </a>
+                </li>
+                <li class="my-2">
+                    <a href="#">
+                        <i class="fa-solid fa-table-list"></i>
+                        <span>Tables</span>
+                    </a>
+                </li>
+                <li class="my-2">
+                    <a href="#">
+                        <i class="fa-solid fa-chart-simple"></i>
+                        <span>Charts</span>
+                    </a>
+                </li>
+                <li class="my-2">
+                    <a href="#">
+                        <i class="fa-regular fa-gem"></i>
+                        <span>Icons</span>
+                    </a>
+                </li>
+                <li class="my-2">
+                    <h6>PAGES</h6>
+                </li>
+                <li class="my-2">
+                    <a href="#">
+                        <i class="fa-regular fa-user"></i>
+                        <span>Profile</span>
+                    </a>
+                </li>
+                <li class="my-2">
+                    <a href="#">
+                        <i class="fa-regular fa-circle-question"></i>
+                        <span>F.A.Q</span>
+                    </a>
+                </li>
+                <li class="my-2">
+                    <a href="#">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </li>
+                <li class="my-2">
+                    <a href="#">
+                        <i class="fa-solid fa-address-card"></i>
+                        <span>Register</span>
+                    </a>
+                </li>
+                <li class="my-2">
+                    <a href="#">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        <span>Login</span>
+                    </a>
+                </li>
+                <li class="my-2">
+                    <a href="#">
+                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <span>Error 404</span>
+                    </a>
+                </li>
+                <li class="my-2">
+                    <a href="#">
+                        <i class="fa-regular fa-file"></i>
+                        <span>Blank</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Side-Bar End -->
+
+
+    <!-- Bread Crumb Start -->
+    <div class="bread-crumb">
+        <div class="container">
+            <h2>Dashboard</h2>
+              <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Dashboard</li>
+                </ol>
+              </nav>
+        </div>
+    </div>
+    <!-- Bread Crumb End -->
+
+
+
+    <!-- Dashboard Content Start -->
+
+
+    <div class="dashoard-content">
+        <div class="container">
+            <div class="row">
+
+
+                <!-- Left side columns Start -->
+                <div class="col-lg-8">
+                    <div class="row">
+                                
+
+                        <div class="col-lg-4 w-50 sales-card">
+                            <div class="sales">
+                                <div class="sales-title sec-title">
+                                    <h4>Sales<span> | Today</span></h4>
+                                    <div class="more">...</div>
+                                </div>
+                                <div class="sales-content">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                    <div>
+                                        <h4>145</h4>
+                                        <p><span>12%</span> increase</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 w-50 sales-card">
+                            <div class="sales">
+                                <div class="sales-title sec-title">
+                                    <h4>Revenue<span> | This Month</span></h4>
+                                    <div class="more">...</div>
+                                </div>
+                                <div class="sales-content">
+                                    <i class="fa-solid fa-dollar-sign"></i>
+                                    <div>
+                                        <h4>$3,264</h4>
+                                        <p><span>8%</span> increase</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                
+                    <div class="py-4">
+                        <div class="sales">
+                            <div class="sales-title sec-title">
+                                <h4>Customers<span> | This Year</span></h4>
+                                <div class="more">...</div>
+                            </div>
+                            <div class="sales-content">
+                                <i class="fa-solid fa-user-group"></i>
+                                <div>
+                                    <h4>1244</h4>
+                                    <p><span class="decrease">12%</span> decrease</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- Reports Cards -->
+                    <div class="reports">
+                        <div class="sales">
+                            <div class="sales-title sec-title">
+                                <h4>Reports<span> | Today</span></h4>
+                                <div class="more">...</div>
+                            </div>
+                            
+                    <!-- Line Chart -->
+                    <div>
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <script>
+                    const ctx = document.getElementById('myChart');
+                    
+                    new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                        labels: ['0', '20', '40', '60', '80', '100'],
+                        datasets: [{
+                            label: '# of Votes',
+                            data: [12, 19, 3, 5, 2, 3],
+                            borderWidth: 1
+                        }]
+                        },
+                        options: {
+                        scales: {
+                            y: {
+                            beginAtZero: true
+                            }
+                        }
+                        }
+                    });
+                    </script>
+                <!-- End Line Chart -->
+
+                    </div>
+                    </div>
+
+
+
+                    <!-- Recent Sales Start -->
+                    <div class="py-4">
+                        <div class="sales recent-sales">
+                            <div class="sales-title sec-title">
+                                <h4>Recent Sales<span> | Today</span></h4>
+                                <div class="more">...</div>
+                            </div>
+                            
+                            <div class="recent-head pt-3 pb-2 d-flex justify-content-between">
+                                <div class="recent-head-left">
+                                    <select class="p-1">
+                                        <option>5</option>
+                                        <option selected>10</option>
+                                        <option>15</option>
+                                        <option>20</option>
+                                        <option>25</option>
+                                    </select>
+                                    <span>entries per page</span>
+                                </div>
+                                <div class="recent-head-right">
+                                    <input class="py-1 px-2" type="text" placeholder="Search..." />
+                                </div>
+                            </div>
+
+                            <table class="border-bottom w-100">
+                                <thead>
+                                    <tr>
+                                        <th class="id">#</th>
+                                        <th>Customer</th>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="id">#2049</td>
+                                        <td>Ashleigh Langosh</td>
+                                        <td><a href="#">At recusandae consect</a></td>
+                                        <td>$147</td>
+                                        <td class="approved">Approved</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="id">#2147</td>
+                                        <td>Bridie Kessler</td>
+                                        <td><a href="#">Blanditiis dolor</a></td>
+                                        <td>$47</td>
+                                        <td class="pending">Pending</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="id">#2457</td>
+                                        <td>Brandon Jacob</td>
+                                        <td><a href="#">At praesentium minu</a></td>
+                                        <td>$64</td>
+                                        <td class="approved">Approved</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="id">#2644</td>
+                                        <td>Angus Grady</td>
+                                        <td><a href="#">Ut voluptatem id earum</a></td>
+                                        <td>$67</td>
+                                        <td class="rejected">Rejected</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="id">#2644</td>
+                                        <td>Raheem Lehner</td>
+                                        <td><a href="#">Sunt similique distin</a></td>
+                                        <td>$165</td>
+                                        <td class="approved">Approved</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="mt-3 mb-0">Showing 1 to 5 of 5 entries</p>
+                        </div>
+                    </div>
+
+
+
+
+                    <!-- Recent Sales Start -->
+                        <div class="sales recent-sales top-selling">
+                            <div class="sales-title sec-title">
+                                <h4>Top Selling<span> | Today</span></h4>
+                                <div class="more">...</div>
+                            </div>
+
+                            <table class="mt-2 w-100">
+                                <thead>
+                                    <tr>
+                                        <th>Preview</th>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Sold</th>
+                                        <th>Revenue</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="product-img">
+                                            <a href="#"><img class="w-100" src="img/product-1.jpg" alt="product-1"></a>
+                                        </td>
+                                        <td class="product"><a href="#">Ut inventore ipsa voluptas nulla</a></td>
+                                        <td>$64</td>
+                                        <td class="sold">124</td>
+                                        <td>$5,828</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="product-img">
+                                            <a href="#"><img class="w-100" src="img/product-2.jpg" alt="product-1"></a>
+                                        </td>
+                                        <td class="product"><a href="#">Exercitationem similique doloremque</a></td>
+                                        <td>$46</td>
+                                        <td class="sold">98</td>
+                                        <td>$4,508</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="product-img">
+                                            <a href="#"><img class="w-100" src="img/product-3.jpg" alt="product-1"></a>
+                                        </td>
+                                        <td class="product"><a href="#">Doloribus nisi exercitationem</a></td>
+                                        <td>$59</td>
+                                        <td class="sold">74</td>
+                                        <td>$4,366</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="product-img">
+                                            <a href="#"><img class="w-100" src="img/product-4.jpg" alt="product-1"></a>
+                                        </td>
+                                        <td class="product"><a href="#">Officiis quaerat sint rerum error</a></td>
+                                        <td>$32</td>
+                                        <td class="sold">63</td>
+                                        <td>$2,016</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="product-img">
+                                            <a href="#"><img class="w-100" src="img/product-5.jpg" alt="product-1"></a>
+                                        </td>
+                                        <td class="product"><a href="#">Sit unde debitis delectus repellendus</a></td>
+                                        <td>$79</td>
+                                        <td class="sold">41</td>
+                                        <td>$3,239</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+
+
+                </div>
+                <!-- Left side columns End -->
+
+
+                <!-- Right side columns Start -->
+
+                <div class="col-lg-4">
+
+
+                    <!-- Recent Activity Start -->
+                    <div class="recent-activity">
+                        <div class="sec-title">
+                            <h4>Recent Activity<span> | Today</span></h4>
+                            <div class="more">...</div>
+                        </div>
+                        <div class="activity">
+                            <div class="activity-item d-flex">
+                                <div class="activite-label">
+                                    <span>32 min</span>
+                                </div>
+                                <i class="fa-solid fa-circle"></i>
+                                <div class="activity-content">
+                                    <p>Quia quae rerum<br /> <a href="#" class="text-black">explicabo officiis</a> beatae</p>
+                                </div>
+                            </div>
+                            <div class="activity-item d-flex">
+                                <div class="activite-label">
+                                    <span>56 min</span>
+                                </div>
+                                <i class="fa-solid fa-circle"></i>
+                                <div class="activity-content">
+                                    <p>Voluptatem blanditiis blanditiis eveniet</p>
+                                </div>
+                            </div>
+                            <div class="activity-item d-flex">
+                                <div class="activite-label">
+                                    <span>2 hrs</span>
+                                </div>
+                                <i class="fa-solid fa-circle"></i>
+                                <div class="activity-content">
+                                    <p>Voluptates corrupti molestias voluptatem</p>
+                                </div>
+                            </div>
+                            <div class="activity-item d-flex">
+                                <div class="activite-label">
+                                    <span>1 day</span>
+                                </div>
+                                <i class="fa-solid fa-circle"></i>
+                                <div class="activity-content">
+                                    <p>Tempore autem saepe <a href="#" class="text-black">occaecati voluptatem</a> tempore</p>
+                                </div>
+                            </div>
+                            <div class="activity-item d-flex">
+                                <div class="activite-label">
+                                    <span>2 days</span>
+                                </div>
+                                <i class="fa-solid fa-circle"></i>
+                                <div class="activity-content">
+                                    <p>Est sit eum reiciendis exercitationem</p>
+                                </div>
+                            </div>
+                            <div class="activity-item d-flex">
+                                <div class="activite-label">
+                                    <span>4 weeks</span>
+                                </div>
+                                <i class="fa-solid fa-circle"></i>
+                                <div class="activity-content">
+                                    <p>Dicta dolorem harum nulla eius. Ut quidem quidem sit quas</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Recent Activity Start -->
+
+                    <!-- Website Traffic Start -->
+                    <div class="website-traffic sales my-4">
+                        <div class="sec-title">
+                            <h4>Budget Report<span> | This Month</span></h4>
+                            <div class="more">...</div>
+                        </div>
+
+                        <div>
+                            <canvas id="myChart2"></canvas>
+                        </div>
+
+                        <!-- Start Doughnut chart -->
+                        <script>
+                            const ctx2 = document.getElementById('myChart2');
+                            
+                            new Chart(ctx2, {
+                                type: 'radar',
+                                data: {
+                                    labels: [
+                                        'Sales',
+                                        'Market',
+                                        'Delvel',
+                                        'Customer Support',
+                                        'gology',
+                                        'ration',
+                                    ],
+                                    datasets: [{
+                                        label: 'My First Dataset',
+                                        data: [300, 50, 100],
+                                        backgroundColor: [
+                                        'rgb(255, 99, 132)',
+                                        'rgb(54, 162, 235)',
+                                        'rgb(255, 205, 86)'
+                                        ],
+                                        hoverOffset: 4
+                                    }]
+                                },
+                                options: {
+                                scales: {
+                                    y: {
+                                    beginAtZero: true
+                                    }
+                                }
+                                }
+                            });
+                            </script>
+                        <!-- End Doughunt Chart -->
+                    </div>
+                    <!-- Website Traffic End -->
+
+                    <!-- Website Traffic Start -->
+                    <div class="website-traffic sales my-4">
+                        <div class="sec-title">
+                            <h4>Website Traffic<span> | Today</span></h4>
+                            <div class="more">...</div>
+                        </div>
+
+                        <div>
+                            <canvas id="myChart1"></canvas>
+                        </div>
+
+                        <!-- Start Doughnut chart -->
+                        <script>
+                            const ctx1 = document.getElementById('myChart1');
+                            
+                            new Chart(ctx1, {
+                                type: 'doughnut',
+                                data: {
+                                
+                                    datasets: [{
+                                        label: 'My First Dataset',
+                                        data: [300, 50, 100],
+                                        backgroundColor: [
+                                        'rgb(255, 99, 132)',
+                                        'rgb(54, 162, 235)',
+                                        'rgb(255, 205, 86)'
+                                        ],
+                                        hoverOffset: 4
+                                    }]
+                                },
+                                options: {
+                                scales: {
+                                    y: {
+                                    beginAtZero: true
+                                    }
+                                }
+                                }
+                            });
+                            </script>
+                        <!-- End Doughunt Chart -->
+                    </div>
+                    <!-- Website Traffic End -->
+
+                    <!-- News & Update Start -->
+                    <div class="sales">
+                        <div class="sales-title sec-title">
+                            <h4>News & Update<span> | Today</span></h4>
+                            <div class="more">...</div>
+                        </div>
+                        <div class="news-content mt-3">
+                            <div class="news-box d-flex justify-content-between">
+                                <div class="img-box">
+                                    <img class="w-100" src="img/news-1.jpg" alt="news-1">
+                                </div>
+                                <div class="news-info">
+                                    <a href="#">Nihil blanditiis at in nihil autem</a>
+                                    <p>Sit recusandae non aspernatur laboriosam. Quia enim eligendi sed ut harum...</p>
+                                </div>
+                            </div>
+                            <div class="news-box d-flex justify-content-between">
+                                <div class="img-box">
+                                    <img class="w-100" src="img/news-2.jpg" alt="news-1">
+                                </div>
+                                <div class="news-info">
+                                    <a href="#">Quidem autem et impedit</a>
+                                    <p>Illo nemo neque maiores vitae officiis cum eum turos elan dries werona nande...</p>
+                                </div>
+                            </div>
+                            <div class="news-box d-flex justify-content-between">
+                                <div class="img-box">
+                                    <img class="w-100" src="img/news-3.jpg" alt="news-1">
+                                </div>
+                                <div class="news-info">
+                                    <a href="#">Id quia et et ut maxime similique occaecati ut</a>
+                                    <p>Fugiat voluptas vero eaque accusantium eos. Consequuntur sed ipsam et totam...</p>
+                                </div>
+                            </div>
+                            <div class="news-box d-flex justify-content-between">
+                                <div class="img-box">
+                                    <img class="w-100" src="img/news-4.jpg" alt="news-1">
+                                </div>
+                                <div class="news-info">
+                                    <a href="#">Laborum corporis quo dara net para</a>
+                                    <p>Qui enim quia optio. Eligendi aut asperiores enim repellendusvel rerum cuder...</p>
+                                </div>
+                            </div>
+                            <div class="news-box d-flex justify-content-between">
+                                <div class="img-box">
+                                    <img class="w-100" src="img/news-5.jpg" alt="news-1">
+                                </div>
+                                <div class="news-info">
+                                    <a href="#">Et dolores corrupti quae illo quod dolor</a>
+                                    <p>Odit ut eveniet modi reiciendis. Atque cupiditate libero beatae dignissimos eius...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- News & Update End -->
+
+                </div>
+                <!-- Right side columns End -->
+
+            </div>
+        </div>
+    </div>
+    <!-- Dashboard Content End -->
+
+    <!-- Footer Start -->
+    <footer class="text-center border-top mt-5 py-4">
+        <p class="copyright">&copy; Copyright <span>NiceAdmin.</span> All Rights Reserved</p>
+        <p class="created">Designed by <a href="https://www.facebook.com/abdelhameedmarei" target="_blank">Marei</a></p>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Button To TOP Start -->
+    <div class="top-btn">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    <!-- Button To TOP End -->
+
+    <!-- Link Fontawesome JS Library -->
+    <script src="js/all.min.js"></script>
+    <!-- Link Bootstrap JS Library -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- Link jQuery Script -->
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <!-- Link Script JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
