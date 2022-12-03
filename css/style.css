@@ -164,11 +164,11 @@ body {
   overflow-y: auto;
   width: 300px;
   height: 100vh;
-  scrollbar-width: thin;
-  scrollbar-color: #aab7cf transparent;
   -webkit-box-shadow: 10px 10px 20px rgba(1, 41, 112, 0.1) inset;
           box-shadow: 10px 10px 20px rgba(1, 41, 112, 0.1) inset;
   background-color: #fff;
+  -webkit-transition: left .3s ease-in-out;
+  transition: left .3s ease-in-out;
 }
 
 .sidebar ul li {
@@ -197,11 +197,44 @@ body {
   color: #899bbd;
 }
 
+.sidebar ul li a .fa-chevron-down {
+  float: right;
+  padding: 0;
+  margin-top: 5px;
+}
+
 .sidebar ul li h6 {
   font-size: 12px;
   font-weight: bold;
   padding: 10px 15px;
   color: #899bbd;
+}
+
+.sidebar ul li .sub-menu {
+  display: none;
+  margin-left: 25px;
+}
+
+.sidebar ul li .sub-menu a {
+  font-size: 14px;
+}
+
+.sidebar ul li .sub-menu a::before {
+  content: '\25CB';
+  font-size: 17px;
+  margin-right: 5px;
+}
+
+.sub-block {
+  display: block;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #aab7cf;
 }
 
 .sidebar li a.active {
@@ -215,8 +248,6 @@ body {
 
 .sidebar.hide {
   left: 0;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
 }
 
 @media (max-width: 600px) {
