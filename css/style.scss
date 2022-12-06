@@ -337,7 +337,7 @@ body{
         }
         th, td{
             padding: 8px;
-        }    
+        }
     }
 }
 
@@ -351,6 +351,9 @@ tbody tr td.id{
     font-size: 14px;
     text-align: center;
     border-radius: 10px;
+    display: block;
+    padding: 3px !important;
+    margin-top: 6px;
 }
 .approved{background: #2e8754;}
 .pending{background: #ffc107;}
